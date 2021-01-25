@@ -60,13 +60,12 @@ router.get('/:id', async (req, res, next) => {
 //Update Blog
 router.patch('/:id', async (req, res, next) => {
   const { params: { id }, body } = req;
-  res.send("data")
- /* try {
+  try {
     const blogs = await editOne(id, body);
     res.json(blogs);
   } catch (e) {
     next(e);
-  }*/
+  }
 });
 //Delete By ID
 router.delete('/:id',async (req, res, next) => {

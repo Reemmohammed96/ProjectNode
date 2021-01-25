@@ -6,7 +6,7 @@ const getAll=()=>Blog.find({}).exec();
 
 const getById=(id)=>Blog.findById(id).exec();
 
-const editOne = (id, body) => Todo.findByIdAndUpdate(id, body, { new: true }).exec();
+const editOne = (id, body) => Blog.findByIdAndUpdate(id, body, { new: true }).exec();
 
 const getuserBlogs = (query) => Blog.find(query).exec();
 
