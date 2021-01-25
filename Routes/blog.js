@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
     next(e);
   }
 });
-//GET By Tag
+//search By Tag
 router.get('/tags/:tag', async (req, res, next) => {
   const { params: {tag} } = req;
   try {
@@ -60,12 +60,13 @@ router.get('/:id', async (req, res, next) => {
 //Update Blog
 router.patch('/:id', async (req, res, next) => {
   const { params: { id }, body } = req;
-  try {
+  res.send("data")
+ /* try {
     const blogs = await editOne(id, body);
     res.json(blogs);
   } catch (e) {
     next(e);
-  }
+  }*/
 });
 //Delete By ID
 router.delete('/:id',async (req, res, next) => {
