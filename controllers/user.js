@@ -31,7 +31,7 @@ const editUser = (id, body) => User.findByIdAndUpdate(id, body, { new: true }).e
 
 const pushfollow = (id, targetid) =>User.update( { "_id":id },
 {$push:{fowlledid :targetid}},
- { new: true });
+ { new: true }).exec();
 const deleteone=(id) => User.findOneAndDelete(id).exec();
 
 
