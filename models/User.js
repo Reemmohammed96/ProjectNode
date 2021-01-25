@@ -27,8 +27,8 @@ const userSchema = new Schema({
 
   fowlledid: [{
       type: Schema.Types.ObjectId,
-      ref: 'Blog'
-  }] ,
+      ref: 'User'
+  }] 
 },
 {
   //delete password from response
