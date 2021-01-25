@@ -29,9 +29,17 @@ const getUser =(id) => User.findById(id).exec();
 
 const editUser = (id, body) => User.findByIdAndUpdate(id, body, { new: true }).exec();
 
-const pushfollow = (id, targetid) =>
-    User.findByIdAndUpdate(id, {$push:{fowlledid :targetid}}, { new: true }).exec();
+const pushfollow = (id, targetid) =>User.update( { "_id":id },
+{$push:{fowlledid :targetid}},
+ { new: true }).exec();
 const deleteone=(id) => User.findOneAndDelete(id).exec();
+
+
+
+
+
+
+
 module.exports = {
   create,
   login,
