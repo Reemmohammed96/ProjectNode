@@ -18,7 +18,7 @@ const blogSchema = new Schema({
     ref: 'User',
   },
   
-  tags: [{tag:String}],
+  tags: [String],
 
  
 });
