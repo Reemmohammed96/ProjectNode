@@ -13,7 +13,7 @@ const getuserBlogs = (query) => Blog.find(query).exec();
 const deleteone=(id) => Blog.findOneAndDelete({'_id':id}); 
 
 //const getblog=(_tag) =>Blog.find({tags:{$elemMatch:{tag:_tag}}}).exec();
-const getblog = ({tags}) => Blog.find({tags}).exec();
+const getblog = ({tag}) => Blog.find({tag}).exec();
 
 module.exports={
     create,
