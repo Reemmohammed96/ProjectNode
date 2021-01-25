@@ -1,8 +1,9 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const app=express();
-const routes=require('./Routes')
-mongoose.connect('mongodb://localhost:27017/DATA',{useUnifiedTopology:true});
+const routes=require('./Routes');
+const { MONGODB_URI } = process.env;
+mongoose.connect(MONGODB_URI,{useUnifiedTopology:true});
 app.use(express.json());
 app.use('/',routes)
 

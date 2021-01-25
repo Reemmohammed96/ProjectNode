@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "node index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "reem",
@@ -13,9 +14,12 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.13"
+    "mongoose": "14.15.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "engines": {
+        "node": "<node version>"
+        }
 }
