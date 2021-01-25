@@ -1,6 +1,6 @@
 const express = require('express');
 const {
-create,login, getAll, getUser,editUser,deleteone,pushfollowID} = require('../controllers/user');
+create,login, getAll, getUser,editUser,deleteone,pushfollow} = require('../controllers/user');
 const router = express.Router();
 //get user
 router.get('/', async (req, res, next) => {
