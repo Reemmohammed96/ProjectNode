@@ -29,9 +29,9 @@ const getUser =(id) => User.findById(id).exec();
 
 const editUser = (id, body) => User.findByIdAndUpdate(id, body, { new: true }).exec();
 
-const pushfollow = (id, targetid) =>User.update( { "_id":id },
+const pushfollow = (id, targetid) =>User.update(id,
 {$push:{fowlledid :targetid}},
- { new: true }).exec();
+ { new: true });
 const deleteone=(id) => User.findOneAndDelete(id).exec();
 
 
