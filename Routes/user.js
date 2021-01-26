@@ -57,6 +57,8 @@ router.delete('/:id',async (req, res, next) => {
   
   router.post('/follow/:targetid',async(req,res,next)=>{
     const { params: {targetid} , user: { id } } = req;
+    console.log(id);
+    console.log(targetid);
     try {
       const userfollow= await pushfollow( id ,targetid);
       res.json(userfollow);
